@@ -15,7 +15,7 @@ module.exports = {
                 );
                 res.end("Error serving content!");
             };
-            res.end(data)
-        })
-    }
+            res.end(data);
+        });
+    },
 }

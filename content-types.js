@@ -16,9 +16,9 @@ module.exports = {
         "Content-Type": "text/javascript"       
     },
     jpg: {
-        "Content-Type": "text/jpg"
+        "Content-Type": "image/jpg"
     },
     img: {
-        "Content-Type": "text/png"        
+        "Content-Type": "image/png"        
     }
 }

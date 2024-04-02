@@ -17,27 +17,27 @@ router.get("/", (req, res) => {
     res.writeHead(httpStatus.Ok, contentTypes.html);
     utils.getFile("views/index.html", res);
 });
-router.get("/courses", (req, res) => {
+router.get("/courses.html", (req, res) => {
     res.writeHead(httpStatus.Ok, contentTypes.html);
     utils.getFile("views/courses.html", res);
 });
-router.get("/contact", (req, res) => {
+router.get("/contact.html", (req, res) => {
     res.writeHead(httpStatus.Ok, contentTypes.html);
-    utils.getFile("views/index.html", res);
+    utils.getFile("views/contact.html", res);
 });
 // POST 라우트
-router.post("/contact", (req, res) => {
+router.post("/contact.html", (req, res) => {
     res.writeHead(httpStatus.Ok, contentTypes.html);
     utils.getFile("views/thanks.html", res);
 });
 // 에셋 라우트
 // CSS 에셋 라우트
 router.get("/bootstrap.css", (req, res) => {
-    res.writeHead(httpStatus.Ok, contentTypes.html);
+    res.writeHead(httpStatus.Ok, contentTypes.css);
     utils.getFile("public/css/bootstrap.css", res);
 });
-router.get("/coursee.css", (req, res) => {
-    res.writeHead(httpStatus.Ok, contentTypes.html);
+router.get("/style.css", (req, res) => {
+    res.writeHead(httpStatus.Ok, contentTypes.css);
     utils.getFile("public/css/style.css", res);
 });
 // JS 에셋  라우트
@@ -55,4 +55,4 @@ router.get("/graph.png", (req, res) => {
     utils.getFile("public/img/graph.png", res);
 });
 http.createServer(router.handel).listen(port);
-console.log(`Server at: http://localhost${port}`);
+console.log(`Server at: http://localhost:${port}`);
